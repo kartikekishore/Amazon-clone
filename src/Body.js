@@ -47,6 +47,24 @@ const data_img_2 = [
     "/slides2/17.jpg",
   ],
 ];
+const data_img_3 = [
+    "Explore everyday essentials",
+    [
+      "/slides3/1.jpg",
+      "/slides3/2.jpg",
+      "/slides3/3.jpg",
+      "/slides3/4.jpg",
+      "/slides3/5.jpg",
+      "/slides3/6.jpg",
+      "/slides3/7.jpg",
+      "/slides3/8.jpg",
+      "/slides3/9.jpg",
+      "/slides3/10.jpg",
+      "/slides3/11.jpg",
+      "/slides3/12.jpg",
+      "/slides3/13.jpg",
+    ],
+  ];
 function Body() {
   return (
     <div id="top_id">
@@ -84,7 +102,7 @@ function Body() {
       <Slide data={data_img_2} />
 
       {/* Next slide */}
-      <Slide data={data_img_2} />
+      <Slide data={data_img_3} />
 
       {/* Another 4-card row */}
       <div className="flex px-6 bg-gradient-to-b from-transparent to-white w-full gap-4">
