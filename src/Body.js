@@ -7,7 +7,8 @@ import "swiper/css";
 import "swiper/css/navigation";
 
 import "./body.css";
-
+import Card from "./components/Card";
+import Slide from "./components/Slide";
 // import Swiper core and required modules
 import SwiperCore, { Autoplay, Pagination, Navigation } from "swiper";
 
@@ -48,11 +49,10 @@ const data_img_2 = [
 ];
 function Body() {
   return (
-    <div>
+    <div id="top_id">
       {/* Top most slider */}
-      <div className="h-[600px] ">
+      <div className="h-[600px] gradient">
         <Swiper
-          navigation={true}
           className="mySwiper_top"
           spaceBetween={30}
           centeredSlides={true}
@@ -71,34 +71,31 @@ function Body() {
           ))}
         </Swiper>
       </div>
-      {/* Next slide*/}
-      <div class="container mx-auto m-4 bg-[#ffff]">
-        <div className="font-bold ">
-          {" "}
-          <h1> {data_img_2[0]}</h1>
-        </div>
-        <div class="  mx-4 text-center mt-10 flex">
-          {" "}
-          <Swiper
-            slidesPerView={5}
-            spaceBetween={60}
-            navigation={true}
-            pagination={{
-              clickable: true,
-            }}
-            autoHeight={true}
-            className="mySwiper "
-          >
-            {data_img_2[1].map((item) => (
-              <SwiperSlide key={item}>
-                <div className="h-[70%]">
-                  <img src={item} alt="" className="" />
-                </div>
-              </SwiperSlide>
-            ))}
-          </Swiper>
-        </div>
+
+      {/* 4- card */}
+      <div className="flex px-6 bg-gradient-to-b from-transparent to-white w-full gap-4 absolute top-1/2 z-30">
+        <Card />
+        <Card />
+        <Card />
+        <Card />
       </div>
+
+      {/* Next slide*/}
+      <Slide data={data_img_2} />
+
+      {/* Next slide */}
+      <Slide data={data_img_2} />
+
+      {/* Another 4-card row */}
+      <div className="flex px-6 bg-gradient-to-b from-transparent to-white w-full gap-4">
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+      </div>
+
+      {/* Next slide*/}
+      <Slide data={data_img_2} />
     </div>
   );
 }
