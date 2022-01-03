@@ -1,15 +1,14 @@
 import React from "react";
 
-
 const ColoredLine = ({ color }) => (
-    <hr
-        style={{
-            color: color,
-            backgroundColor: color,
-            height: 1,
-            borderColor : color
-        }}
-    />
+  <hr
+    style={{
+      color: color,
+      backgroundColor: color,
+      height: 1,
+      borderColor: color,
+    }}
+  />
 );
 
 function Footer() {
@@ -27,7 +26,6 @@ function Footer() {
       {/*  */}
       <div className="bg-[#232f3e]  text-white p-4">
         <div className="">
-          
           <a href="/" className="flex place-content-center ">
             <img
               className="h-[10vh]"
@@ -35,8 +33,9 @@ function Footer() {
               alt=""
             ></img>
           </a>
-         
+
           <ColoredLine color="#314053" className="mt-4" />
+
           <div class="flex gap-2 text-xs mt-2 place-content-center">
             <div>Australia</div>
             <div>Brazil</div>

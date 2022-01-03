@@ -5,6 +5,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
+import { Button } from "@mui/material";
 
 import "./body.css";
 import Card from "./components/Card";
@@ -14,6 +15,17 @@ import SwiperCore, { Autoplay, Pagination, Navigation } from "swiper";
 
 // install Swiper modules
 SwiperCore.use([Autoplay, Pagination, Navigation]);
+
+const ColoredLine = ({ color }) => (
+  <hr
+    style={{
+      color: color,
+      backgroundColor: color,
+      height: 1,
+      borderColor: color,
+    }}
+  />
+);
 
 const data_img = [
   "/slides/1.jpg",
@@ -48,23 +60,23 @@ const data_img_2 = [
   ],
 ];
 const data_img_3 = [
-    "Explore everyday essentials",
-    [
-      "/slides3/1.jpg",
-      "/slides3/2.jpg",
-      "/slides3/3.jpg",
-      "/slides3/4.jpg",
-      "/slides3/5.jpg",
-      "/slides3/6.jpg",
-      "/slides3/7.jpg",
-      "/slides3/8.jpg",
-      "/slides3/9.jpg",
-      "/slides3/10.jpg",
-      "/slides3/11.jpg",
-      "/slides3/12.jpg",
-      "/slides3/13.jpg",
-    ],
-  ];
+  "Explore everyday essentials",
+  [
+    "/slides3/1.jpg",
+    "/slides3/2.jpg",
+    "/slides3/3.jpg",
+    "/slides3/4.jpg",
+    "/slides3/5.jpg",
+    "/slides3/6.jpg",
+    "/slides3/7.jpg",
+    "/slides3/8.jpg",
+    "/slides3/9.jpg",
+    "/slides3/10.jpg",
+    "/slides3/11.jpg",
+    "/slides3/12.jpg",
+    "/slides3/13.jpg",
+  ],
+];
 function Body() {
   return (
     <div id="top_id">
@@ -114,6 +126,24 @@ function Body() {
 
       {/* Next slide*/}
       <Slide data={data_img_2} />
+
+      {/* Sign In part */}
+
+      <div className="flex place-content-center my-4  ">
+        {/* <Button variant="contained" color="warning">Sign In</Button> */}
+        <Button
+          style={{
+            borderRadius: 5,
+            backgroundColor: "#f1a644", //f1a644
+            padding: "9px 32px",
+            fontSize: "9px",
+          }}
+          className="text-black"
+          variant="contained"
+        >
+          Sign In
+        </Button>
+      </div>
     </div>
   );
 }
