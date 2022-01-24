@@ -5,10 +5,10 @@ import Footer from "./Footer";
 function App() {
   return (
     <div className="App">
-    {/* <h1>Amazon Store</h1> */}
-    <Header/>
-    <Body/>
-    <Footer/>
+      {/* <h1>Amazon Store</h1> */}
+      <Header />
+      <Body />
+      <Footer />
     </div>
   );
 }
