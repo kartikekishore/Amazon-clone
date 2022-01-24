@@ -1,6 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
+
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
+
+
+
 
 // Import Swiper styles
 import "swiper/css";
@@ -77,9 +81,15 @@ const data_img_3 = [
     "/slides3/13.jpg",
   ],
 ];
+
+
 function Body() {
+
+ 
+
   return (
     <div id="top_id">
+    
       {/* Top most slider */}
       <div className="h-[600px] gradient">
         <Swiper

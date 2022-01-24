@@ -14,6 +14,7 @@ const Cart = () => {
 
   return (
     <div>
+      Your Cart
       <div className="flex gap-x-4 p-5 bg-white">
         {items.map(
           ({

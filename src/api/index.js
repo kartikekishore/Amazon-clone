@@ -3,6 +3,10 @@ import axios from "axios";
 const API = axios.create({
   baseURL: "https://fswi-amazon-clone.herokuapp.com",
 });
+API.interceptors.request.use((req) => {
+
+  return req;
+});
 export const fetchProduct = (id) => API.get(`/products/${id}`);
 export const fetchProducts = () => API.get("/products");
 export const createProduct = (newProduct) => API.post("/products", newProduct);

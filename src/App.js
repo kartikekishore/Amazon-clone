@@ -1,3 +1,5 @@
+import { Routes, Route } from "react-router-dom";
+
 import Header from "./Header";
 import Body from "./Body";
 import Footer from "./Footer";
@@ -10,7 +12,13 @@ function App() {
     <div className="App">
       {/* <h1>Amazon Store</h1> */}
       <Header />
-      <Body />
+      <Routes>
+            <Route path="/" element={ <Body />} />
+            <Route path="/cart" element={<Cart />} />
+            <Route path="/products/:productId" element={<ProductDetails />} />
+            <Route path="/categories/:categoryId" element={<ProductsByCategory />} />
+        </Routes>
+     
       <Footer />
     </div>
   );
